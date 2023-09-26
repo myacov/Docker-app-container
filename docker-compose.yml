@@ -1,0 +1,49 @@
+version: '3.8'
+services:
+
+  vprodb:
+    build: 
+      context: ./Docker-files/db       # dockerfile location
+    image: jackmil/vprofile_db         # image name created on dockerhub
+    container_name: vprodb             # make container name vprodb
+    ports:
+      - "3306:3306"
+    volumes:
+      - vprodbdata:/var/lib/mysql # mount db folder on 'vprodbdata' volume
+    environment:
+      - MYSQL_ROOT_PASSWORD=vprodbpass
+  
+  vprocache01:
+    image: memcached                    # official image
+    ports:
+      - "11211:11211"
+
+  vpromq01:
+    image: rabbitmq                    # official image
+    ports:
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+
+  vproapp:
+    build: 
+      context: ./Docker-files/app     # dockerfile location
+    image: jackmil/vprofile_app       # image name created on dockerhub
+    container_name: vproapp           # make container name vproapp
+    ports:
+      - "8080:8080"
+    volumes:
+      - vproappdata:/usr/local/tomcat/webapps
+
+  vproweb:
+    build: 
+      context: ./Docker-files/web       # dockerfile location
+    image: jackmil/vprofile_web       # image name created on dockerhub
+    container_name: vproweb
+    ports:
+      - "80:80"
+
+volumes:
+  vprodbdata: {}        # create volume 
+  vproappdata: {}        # create volume
