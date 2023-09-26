@@ -18,6 +18,7 @@ Before you start containerizing your Java application, ensure that you have the 
 
 - [Docker](https://www.docker.com/get-started)
 - [Docker Compose](https://docs.docker.com/compose/install/)
+- [Dockerfile Reference](https://docs.docker.com/engine/reference/builder/) 
 - [Docker Hub](https://hub.docker.com/) (for publishing your container)
 
 
@@ -53,6 +54,36 @@ add vagrant user do docker group:
 usermod -aG docker vagrant
 ```
 
+### Step 2: create Repositories on DockerHub
+1. [`vprofile_app`](./Docker-files/app/Dockerfile)
+2. [`vprofile_db`](./Docker-files/db/Dockerfile)
+3. [`vprofile_web`](./Docker-files/web/Dockerfile)
+
+
+### Step 3: use docker-compose for building and testing
+[`docker-compose.yml`](./docker-compose.yml)
+
+```bash
+docker compose build
+```
+
+```
+docker images
+```
+```
+docker compose up -d
+```
+```
+docker ps
+```
+```
+ip addr show
+```
+look for the private ip or bridge ip
+```
+user: adnin_vp
+password: adnin_vp
+```
 [logout and login]
 ## Usage Instructions
 
