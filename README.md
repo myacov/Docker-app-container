@@ -95,6 +95,13 @@ The project can be replicated and utilized by following the instructions and usi
 ## Conclusion 
 Containerizing a Java application with Docker provides an efficient, scalable, and consistent environment for deployment. This project has demonstrated the steps and considerations involved in this process, serving as a guide for those looking to containerize their applications.
 
+## Future Improvements
+1. Integrate CI/CD pipelines for automating testing and deployment
+2. Use Kubernetes for Container Orchestration
+3. Enhance Security Measures to safeguard the application and data within the container.
+4. Optimize Container Performance under different loads.
+5. Enhance Monitoring and Logging solutions to gain better insights into application behavior and performance in real-time.
+
 ## References and Documentation: 
 - [Dockerfile Reference](https://docs.docker.com/engine/reference/builder/) 
 
