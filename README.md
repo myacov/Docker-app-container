@@ -13,17 +13,18 @@ I chose to delve into Docker, to craft a Docker container for a Java application
 
 ### Project Goals:
 1.	**Grasp Containerization Concepts:** Understand the essentials and benefits of containerization.
-2.	**Acquire Docker Fundamentals:**: Gain proficiency in Docker basics, focusing on its core components, architecture, and interactions.
-3.	**Create and Customize Docker Images**:
-•	Learn to find, create, and customize Docker images to fit specific application needs.
-•	Understand how to write Dockerfiles to define the application environment.
+2.	**Acquire Docker Fundamentals:** Gain proficiency in Docker basics, focusing on its core components, architecture, and interactions.
+3.	**Create and Customize Docker Images:**
+    - Learn to find, create, and customize Docker images to fit specific application needs.
+    - Understand how to write Dockerfiles to define the application environment.
 4.	**Implement Docker Compose:** 
-•   Develop skills in defining and managing multi-container Docker applications using `docker-compose.yml`.
-5.	**Deploy Docker Containers:** Understand the deployment process of Docker containers on real-world application.
-•	Hosting and managing Docker containers on Docker Hub.
-6.	Practical Application:
-•	Apply theoretical knowledge and troubleshooting skills in containerizing a Java application
-•	Validate the working of the containerized application and troubleshoot any issues.
+    - Develop skills in defining and managing multi-container Docker applications using `docker-compose.yml`.
+5.	**Deploy Docker Containers:** 
+    - Understand the deployment process of Docker containers on real-world application.
+    - Hosting and managing Docker containers on Docker Hub.
+6.	**Practical Application:**
+    - Apply theoretical knowledge and troubleshooting skills in containerizing a Java application
+    - Validate the working of the containerized application and troubleshoot any issues.
 
 
 ### Prerequisites
@@ -31,9 +32,7 @@ Before diving in, I ensured the installation / sign up:
 
 - [Docker](https://www.docker.com/get-started)
 - [Docker Compose](https://docs.docker.com/compose/install/)
-- [Docker Hub](https://hub.docker.com/) (for publishing your container)
-
-
+- [Docker Hub](https://hub.docker.com/) (for publishing containers)
 
 ## Implementation Steps
 
